@@ -37,7 +37,8 @@ public class TelefoneConverter implements Converter {
 			return new Telefone(codigoPais, codigoArea, numero);
 		} catch (IndexOutOfBoundsException e) {
 			FacesMessage facesMessage = new FacesMessage(FacesMessage.SEVERITY_ERROR,
-					"Problemas na conversão do telefone.", "Ele deve ser informado com código do país, de área e o número. Ex: +55 (11) 2626-9415");
+					"Problemas na conversão do telefone.", 
+					"Ele deve ser informado com código do país, de área e o número. Ex: +55 (11) 2626-9415");
 
 			throw new ConverterException(facesMessage);
 		}
